@@ -17,7 +17,7 @@ The easiest way to deploy this Bot
 
 Get STRING_SESSION from here:
 
-[![GenerateString](https://img.shields.io/badge/repl.it-generateString-blackwhite)](https://replit.com/@KARAMVEDA/KVMUSICBOT#main.py)
+[![GenerateString](https://img.shields.io/badge/repl.it-generateString-red)](https://replit.com/@KARAMVEDA/KVMUSICBOT#main.py)
 
 ### Mandatory Vars.
 
