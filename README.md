@@ -18,7 +18,7 @@ Get STRING_SESSION from here:
 
 [![GenerateString](https://img.shields.io/badge/repl.it-generateString-red)](https://replit.com/@KARAMVEDA/KVMUSICBOT#main.py)
 
-### Mandatory Vars.
+### ʍǟռɖǟȶօʀʏ ʋǟʀֆ.
 
 - Some Of The Mandatory Vars Are :-
    - `API_ID` :  Give API_ID of your Alternate Telegram Account. also get from here [@UseTGXBot](https://t.me/UseTGXBot)
@@ -33,7 +33,7 @@ Get STRING_SESSION from here:
 
 
 
-## Commands 🛠
+## ς๏๓๓คภ๔ร 🛠
 
 - `/play <song name>` - play song you requested
 - `/dplay <song name>` - play song you requested via deezer
@@ -46,7 +46,7 @@ Get STRING_SESSION from here:
 - `/saavn <song name>` - download songs you want quickly via saavn
 - `/video <song name>` - download videos you want quickly
 
-#### Admins only.
+#### ᴀᴅᴍɪɴꜱ ᴏɴʟʏ.
 - `/player` - open music player settings panel
 - `/pause` - pause song play
 - `/resume` - resume song play
@@ -56,18 +56,18 @@ Get STRING_SESSION from here:
 - `/userbotleave` - remove assistant from your chat
 - `/admincache` - Refresh admin list
 
-## Requirements
+## ЯΣQЦIЯΣMΣПƬƧ
 
 - FFmpeg
 - Python 3.7+
 
-## Deployment
+## D͓̽E͓̽P͓̽L͓̽O͓̽Y͓̽M͓̽E͓̽N͓̽T͓̽
 
-### Config
+### ＣＯＮＦＩＧ
 
 Copy `example.env` to `.env` and fill it with your credentials.
 
-### The good way
+### THE GOOD WAY
 
 1. Install Python requirements:
    ```bash
@@ -78,7 +78,7 @@ Copy `example.env` to `.env` and fill it with your credentials.
    python main.py
    ```
 
-### Docker
+### D͎O͎C͎K͎E͎R͎
 
 1. Build:
    ```bash
@@ -89,7 +89,7 @@ Copy `example.env` to `.env` and fill it with your credentials.
    docker run --env-file .env musicplayer
    ```
 
-## License
+## 𝕃𝕀ℂ𝔼ℕ𝕊𝔼
 
 ### GNU Affero General Public License v3.0
 
