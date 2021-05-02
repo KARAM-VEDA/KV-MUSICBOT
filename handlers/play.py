@@ -95,7 +95,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
                 await f.close()
 
     image1 = Image.open("./background.png")
-    image2 = Image.open("etc/foreground.png")
+    image2 = Image.open("etc/foreground.jpg")
     image3 = changeImageSize(1280, 720, image1)
     image4 = changeImageSize(1280, 720, image2)
     image5 = image3.convert("RGBA")
@@ -533,7 +533,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="✯𝗩𝗖𝗣𝗹𝗮𝘆✯▶️ **Playing** here the song requested by {} 😜".format(
+        caption="⋆𝕂𝕍 𝕄𝕌𝕊𝕀ℂ𝔹𝕆𝕋♠▶️ **Playing** here the song requested by {} 😜".format(
         message.from_user.mention()
         ),
     )
@@ -554,7 +554,7 @@ async def deezer(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "VCPlayBot"
+        user.first_name =  "⋆𝕂𝕍 𝕄𝕌𝕊𝕀ℂ𝔹𝕆𝕋♠"
     usar = user
     wew = usar.id
     try:
@@ -647,9 +647,9 @@ async def deezer(client: Client, message_: Message):
         loc = file_path
         appendable = [s_name, r_by, loc]
         qeue.append(appendable)
-        await res.edit_text(f"✯𝗩𝗖𝗣𝗹𝗮𝘆✯=#️⃣ Queued at position {position}")
+        await res.edit_text(f"⋆𝕂𝕍 𝕄𝕌𝕊𝕀ℂ𝔹𝕆𝕋♠=#️⃣ Queued at position {position}")
     else:
-        await res.edit_text("✯𝗩𝗖𝗣𝗹𝗮𝘆✯=▶️ Playing.....")
+        await res.edit_text("⋆𝕂𝕍 𝕄𝕌𝕊𝕀ℂ𝔹𝕆𝕋♠=▶️ Playing.....")
         chat_id = message_.chat.id
         que[chat_id] = []
         qeue = que.get(message_.chat.id)
@@ -782,12 +782,12 @@ async def jiosaavn(client: Client, message_: Message):
             chat_id=message_.chat.id,
             reply_markup=keyboard,
             photo="final.png",
-            caption=f"✯𝗩𝗖𝗣𝗹𝗮𝘆✯=#️⃣ Queued at position {position}",
+            caption=f"⋆𝕂𝕍 𝕄𝕌𝕊𝕀ℂ𝔹𝕆𝕋♠ =#️⃣ Queued at position {position}",
         
         )           
            
     else:
-        await res.edit_text("✯𝗩𝗖𝗣𝗹𝗮𝘆✯=▶️ Playing.....")
+        await res.edit_text("⋆𝕂𝕍 𝕄𝕌𝕊𝕀ℂ𝔹𝕆𝕋♠ =▶️ Playing.....")
         chat_id = message_.chat.id
         que[chat_id] = []
         qeue = que.get(message_.chat.id)
