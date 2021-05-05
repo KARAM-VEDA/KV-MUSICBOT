@@ -533,7 +533,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="✯𝗩𝗖𝗣𝗹𝗮𝘆✯▶️ **Playing** here the song requested by {} 😜".format(
+        caption="⋆𝕂𝕍 𝕄𝕌𝕊𝕀ℂ𝔹𝕆𝕋♠▶️ **Playing** here the song requested by {} 😜".format(
         message.from_user.mention()
         ),
     )
@@ -647,9 +647,9 @@ async def deezer(client: Client, message_: Message):
         loc = file_path
         appendable = [s_name, r_by, loc]
         qeue.append(appendable)
-        await res.edit_text(f"✯𝗩𝗖𝗣𝗹𝗮𝘆✯=#️⃣ Queued at position {position}")
+        await res.edit_text(f"⋆𝕂𝕍 𝕄𝕌𝕊𝕀ℂ𝔹𝕆𝕋♠=#️⃣ Queued at position {position}")
     else:
-        await res.edit_text("✯𝗩𝗖𝗣𝗹𝗮𝘆✯=▶️ Playing.....")
+        await res.edit_text("⋆𝕂𝕍 𝕄𝕌𝕊𝕀ℂ𝔹𝕆𝕋♠=▶️ Playing.....")
         chat_id = message_.chat.id
         que[chat_id] = []
         qeue = que.get(message_.chat.id)
@@ -678,7 +678,7 @@ async def deezer(client: Client, message_: Message):
 )
 async def jiosaavn(client: Client, message_: Message):
     global que
-    lel = await message_.reply("🔄 **Processing**")
+    lel = await message_.reply("⋆𝕂𝕍 𝕄𝕌𝕊𝕀ℂ𝔹𝕆𝕋♠🔄 **Processing**")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
@@ -758,7 +758,7 @@ async def jiosaavn(client: Client, message_: Message):
              [
                InlineKeyboardButton(
                    text="Join Updates Channel",
-                   url='https://t.me/LaylaList')
+                   url='https://t.me/KV_NETWORK')
              ],
              [       
                InlineKeyboardButton(
@@ -782,12 +782,12 @@ async def jiosaavn(client: Client, message_: Message):
             chat_id=message_.chat.id,
             reply_markup=keyboard,
             photo="final.png",
-            caption=f"✯𝗩𝗖𝗣𝗹𝗮𝘆✯=#️⃣ Queued at position {position}",
+            caption=f"⋆𝕂𝕍 𝕄𝕌𝕊𝕀ℂ𝔹𝕆𝕋♠=#️⃣ Queued at position {position}",
         
         )           
            
     else:
-        await res.edit_text("✯𝗩𝗖𝗣𝗹𝗮𝘆✯=▶️ Playing.....")
+        await res.edit_text("⋆𝕂𝕍 𝕄𝕌𝕊𝕀ℂ𝔹𝕆𝕋♠=▶️ Playing.....")
         chat_id = message_.chat.id
         que[chat_id] = []
         qeue = que.get(message_.chat.id)
@@ -809,4 +809,6 @@ async def jiosaavn(client: Client, message_: Message):
     )
     os.remove("final.png")
 
-# Have u read all. If read RESPECT :-)
+# stay away kangers
+
+# dekh liya toh nikal bhadwe
