@@ -1,8 +1,9 @@
 {
-  "name": "Calls Music",
-  "description": "Telegram bot + userbot for streaming audio in group calls.",
-  "keywords": ["telegram", "python"],
-  "repository": "https://github.com/callsmusic/callsmusic",
+  "name": "★彡KV MUSICBOT彡★",
+  "logo": "https://telegra.ph/file/9d135de2809d9c624a78c.jpg",
+  "description": "Telegram Musicbot & userbot for streaming audio in group voice chat. Made with ❤️ & Join @KV_NETWORK for support, Made By @Karam_0912.  ",
+  "keywords": ["telegram", "python"],                  
+  "repository": "https://github.com/KARAM-VEDA/KV-MUSICBOT",
   "env": {
     "SESSION_NAME": {
       "description": "A Pyrogram session string.",
