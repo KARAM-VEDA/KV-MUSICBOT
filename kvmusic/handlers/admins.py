@@ -4,7 +4,7 @@ from pyrogram import Client
 from pyrogram.types import Message
 
 from .. import queues
-from ..callsmusic import callsmusic
+from ..kvmusic import kvmusic
 from ..helpers.decorators import authorized_users_only
 from ..helpers.decorators import errors
 from ..helpers.filters import command
@@ -18,7 +18,7 @@ async def pause(_, message: Message):
     (
         await message.reply_text('Paused!')
     ) if (
-        callsmusic.pause(message.chat.id)
+        kvmusic.pause(message.chat.id)
     ) else (
         await message.reply_text('Nothing is playing!')
     )
@@ -31,7 +31,7 @@ async def resume(_, message: Message):
     (
         await message.reply_text('Resumed!')
     ) if (
-        callsmusic.resume(message.chat.id)
+        kvmusic.resume(message.chat.id)
     ) else (
         await message.reply_text('Nothing is paused!')
     )
@@ -41,14 +41,14 @@ async def resume(_, message: Message):
 @errors
 @authorized_users_only
 async def stop(_, message: Message):
-    if message.chat.id not in callsmusic.active_chats:
+    if message.chat.id not in kvmusic.active_chats:
         await message.reply_text('Nothing is playing!')
     else:
         try:
             queues.clear(message.chat.id)
         except QueueEmpty:
             pass
-        await callsmusic.stop(message.chat.id)
+        await kvmusic.stop(message.chat.id)
         await message.reply_text('Cleared the queue and left the call!')
 
 
@@ -56,14 +56,14 @@ async def stop(_, message: Message):
 @errors
 @authorized_users_only
 async def skip(_, message: Message):
-    if message.chat.id not in callsmusic.active_chats:
+    if message.chat.id not in kvmusic.active_chats:
         await message.reply_text('Nothing is playing!')
     else:
         queues.task_done(message.chat.id)
         if queues.is_empty(message.chat.id):
-            await callsmusic.stop(message.chat.id)
+            await kvmusic.stop(message.chat.id)
         else:
-            await callsmusic.set_stream(
+            await kvmusic.set_stream(
                 message.chat.id,
                 queues.get(message.chat.id)['file'],
             )
@@ -74,7 +74,7 @@ async def skip(_, message: Message):
 @errors
 @authorized_users_only
 async def mute(_, message: Message):
-    result = callsmusic.mute(message.chat.id)
+    result = kvmusic.mute(message.chat.id)
     (
         await message.reply_text('Muted!')
     ) if (
@@ -92,7 +92,7 @@ async def mute(_, message: Message):
 @errors
 @authorized_users_only
 async def unmute(_, message: Message):
-    result = callsmusic.unmute(message.chat.id)
+    result = kvmusic.unmute(message.chat.id)
     (
         await message.reply_text('Unmuted!')
     ) if (
