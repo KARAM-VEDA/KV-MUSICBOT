@@ -9,7 +9,11 @@ from ..helpers.filters import other_filters2
 @Client.on_message(other_filters2)
 async def start(_, message: Message):
     await message.reply_text(
-        f"""I am an open-source @KV_VCMUSICBOT bot, I let you play music in your group’s voice chat.
+        f"""<b>Hellow {message.from_user.first_name}!
+\nI can play music in your group's voice chat
+Maintained with ❤ by @Karam_0912
+\nTo add in your group contact us at @KV_NETWORK.
+ </b>""",
 
 The commands I currently support are:
 
