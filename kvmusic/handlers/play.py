@@ -6,7 +6,7 @@ from pyrogram.types import Voice
 
 from .. import converter
 from .. import queues
-from ..callsmusic import callsmusic
+from ..kvmusic import kvmusic
 from ..config import DURATION_LIMIT
 from ..downloaders import youtube
 from ..helpers.decorators import errors
@@ -61,9 +61,9 @@ async def play(_, message: Message):
             return
         url = text[offset:offset + length]
         file = await converter.convert(youtube.download(url))
-    if message.chat.id in callsmusic.active_chats:
+    if message.chat.id in kvmusic.active_chats:
         position = await queues.put(message.chat.id, file=file)
         await response.edit_text(f'Queued at position {position}!')
     else:
-        await callsmusic.set_stream(message.chat.id, file)
+        await kvmusic.set_stream(message.chat.id, file)
         await response.edit_text('Playing...')
