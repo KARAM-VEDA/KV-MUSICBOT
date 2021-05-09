@@ -6,7 +6,7 @@ from .config import API_ID
 from .config import BOT_TOKEN
 
 
-Bot(
+bot = Bot(
     ':memory:',
     API_ID,
     API_HASH,
